@@ -1,0 +1,13 @@
+{
+    "development": {
+    "username": "postgres",
+    "password": "nFxXKYKpGIWRkekxtDtQDhPUuLOaTZYK",
+    "database": "railway",
+    "host": "autorack.proxy.rlwy.net",
+    "dialect": "postgres"
+},
+"production": {
+    "use_env_variable": "postgresql://postgres:nFxXKYKpGIWRkekxtDtQDhPUuLOaTZYK@postgres-hnbh.railway.internal:5432/railway",
+    "dialect": "postgres"
+}
+}
