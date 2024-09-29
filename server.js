@@ -6,13 +6,13 @@ const cors = require('cors');
 const app = express();
 
 app.use(cors({
-    origin: 'http://127.0.0.1:5500'
+    origin: 'http://graceful-manifestation-production.up.railway.app'
 }));
 
 // Middleware para interpretar JSON
 app.use(express.json());
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 
 const sequelize = new Sequelize('postgresql://postgres:RTwuXjRgIzgGMLWOkwqOzQwWTdGYGXrZ@junction.proxy.rlwy.net:58426/railway');
 
