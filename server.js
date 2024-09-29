@@ -6,8 +6,12 @@ const cors = require('cors');
 const app = express();
 
 app.use(cors({
-    origin: 'http://graceful-manifestation-production.up.railway.app'
+    origin: ['http://127.0.0.1:5500', 'https://graceful-manifestation-production.up.railway.app'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
 }));
+
 
 // Middleware para interpretar JSON
 app.use(express.json());
@@ -77,6 +81,16 @@ app.post('/login', async (req, res) => {
         res.status(500).send('Erro ao realizar login');
     }
 });
+
+app.get('/users', async (req, res) => {
+    try {
+        const users = await User.findAll();
+        res.status(200).json(users);
+    } catch (error) {
+        res.status(500).send('Erro ao buscar usuários');
+    }
+});
+
 
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
