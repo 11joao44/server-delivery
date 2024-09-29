@@ -126,18 +126,17 @@
                 body: JSON.stringify({ username: name, email, phone, password })
             })
                 .then(response => {
-                    console.log(response);
                     if (!response.ok) {
                         throw new Error('Erro ao registrar usuário: ' + response.statusText);
                     }
                     return response.json();
                 })
                 .then(data => {
-                    if (data.success) {
-                        alert("Conta criada com sucesso!");
-                    } else {
-                        alert("Erro ao criar conta. Tente novamente.");
-                    }
+                    alert(data.message || "Conta criada com sucesso!"); // Use a mensagem do servidor
+                })
+                .catch(error => {
+                    console.error(error);
+                    alert("Erro ao criar conta. Tente novamente.");
                 });
         }
 

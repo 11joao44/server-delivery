@@ -5,6 +5,8 @@ const cors = require('cors');
 
 const app = express();
 
+app.use(express.json());
+
 app.use(cors({
     origin: ['http://127.0.0.1:5500', 'https://graceful-manifestation-production.up.railway.app'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
@@ -13,8 +15,6 @@ app.use(cors({
 }));
 
 
-// Middleware para interpretar JSON
-app.use(express.json());
 
 const PORT = process.env.PORT || 8000;
 
