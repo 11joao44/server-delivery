@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planos e Cadastro</title>
-    <link href="./src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="/src/output.css">
     <style>
         .background-gradient {
             background: linear-gradient(to right, #ff7e5f, #feb47b);
         }
     </style>
 </head>
+
 <body>
-    <section class="h-screen flex justify-center items-center flex-col background-gradient from-gray-100 to-gray-50 py-20">
+    <section
+        class="h-screen flex justify-center items-center flex-col background-gradient from-gray-100 to-gray-50 py-20">
         <!-- Cabeçalho da Página -->
         <div class="text-center mb-10">
             <h1 class="text-4xl font-bold text-white">Escolha o plano ideal para você</h1>
-            <p class="text-lg text-white mt-4">Comece com o pé direito. Oferecemos 30 dias para pedir reembolso, ou seja, risco zero para você.</p>
+            <p class="text-lg text-white mt-4">Comece com o pé direito. Oferecemos 30 dias para pedir reembolso, ou
+                seja, risco zero para você.</p>
         </div>
 
         <!-- Planos -->
         <div class="flex justify-center gap-10 flex-wrap">
             <!-- Plano Mensal -->
-            <div class="bg-white rounded-xl shadow-xl border-2 border-gray-300 transform hover:scale-105 transition-transform duration-300 p-8 text-center max-w-xs">
+            <div
+                class="bg-white rounded-xl shadow-xl border-2 border-gray-300 transform hover:scale-105 transition-transform duration-300 p-8 text-center max-w-xs">
                 <h2 class="text-3xl font-bold mb-4 text-gray-700">Plano Mensal</h2>
                 <p class="text-4xl font-semibold text-orange-500 mb-6">R$ 49,90/mês</p>
                 <ul class="text-gray-600 space-y-2 mb-8">
@@ -30,25 +35,34 @@
                     <li>Teste Grátis por 7 dias</li>
                     <li>Suporte 24/7</li>
                 </ul>
-                <button class="w-full py-3 text-lg font-bold text-white bg-orange-600 rounded-full hover:bg-orange-700 shadow-lg transition-transform duration-300 focus:outline-none focus:ring-4 focus:ring-orange-400" onclick="redirectToSignup()">Escolher Plano</button>
+                <button
+                    class="w-full py-3 text-lg font-bold text-white bg-orange-600 rounded-full hover:bg-orange-700 shadow-lg transition-transform duration-300 focus:outline-none focus:ring-4 focus:ring-orange-400"
+                    onclick="redirectToSignup()">Escolher Plano</button>
             </div>
 
             <!-- Plano Semestral (Mais Popular) -->
-            <div class="bg-white rounded-xl shadow-xl border-4 border-orange-600 transform hover:scale-105 transition-transform duration-300 p-8 text-center max-w-xs relative">
-                <div class="absolute top-0 -mt-6 left-1/2 transform -translate-x-1/2 bg-orange-600 text-white py-2 px-6 rounded-full font-bold text-sm">MAIS POPULAR</div>
+            <div
+                class="bg-white rounded-xl shadow-xl border-4 border-orange-600 transform hover:scale-105 transition-transform duration-300 p-8 text-center max-w-xs relative">
+                <div
+                    class="absolute top-0 -mt-6 left-1/2 transform -translate-x-1/2 bg-orange-600 text-white py-2 px-6 rounded-full font-bold text-sm">
+                    MAIS POPULAR</div>
                 <h2 class="text-3xl font-bold mb-4 text-gray-700">Plano Semestral</h2>
-                <p class="text-xl font-medium text-gray-500 mb-2">Ideal para quem quer economizar!</p> <!-- Frase de destaque -->
+                <p class="text-xl font-medium text-gray-500 mb-2">Ideal para quem quer economizar!</p>
+                <!-- Frase de destaque -->
                 <p class="text-4xl font-semibold text-orange-500 mb-6">R$ 239,00/mês</p>
                 <ul class="text-gray-600 space-y-2 mb-8">
                     <li>Renovação Semestral</li>
                     <li>Teste Grátis por 7 dias</li>
                     <li>Suporte Prioritário</li>
                 </ul>
-                <button class="w-full py-3 text-lg font-bold text-white bg-orange-600 rounded-full hover:bg-orange-700 shadow-lg transition-transform duration-300 focus:outline-none focus:ring-4 focus:ring-orange-400" onclick="redirectToSignup()">Escolher Plano</button>
+                <button
+                    class="w-full py-3 text-lg font-bold text-white bg-orange-600 rounded-full hover:bg-orange-700 shadow-lg transition-transform duration-300 focus:outline-none focus:ring-4 focus:ring-orange-400"
+                    onclick="redirectToSignup()">Escolher Plano</button>
             </div>
 
             <!-- Plano Anual -->
-            <div class="bg-white rounded-xl shadow-xl border-2 border-gray-300 transform hover:scale-105 transition-transform duration-300 p-8 text-center max-w-xs">
+            <div
+                class="bg-white rounded-xl shadow-xl border-2 border-gray-300 transform hover:scale-105 transition-transform duration-300 p-8 text-center max-w-xs">
                 <h2 class="text-3xl font-bold mb-4 text-gray-700">Plano Anual</h2>
                 <p class="text-4xl font-semibold text-orange-500 mb-6">R$ 359,00/mês</p>
                 <ul class="text-gray-600 space-y-2 mb-8">
@@ -56,10 +70,13 @@
                     <li>Teste Grátis por 7 dias</li>
                     <li>Suporte Exclusivo 24/7</li>
                 </ul>
-                <button class="w-full py-3 text-lg font-bold text-white bg-orange-600 rounded-full hover:bg-orange-700 shadow-lg transition-transform duration-300 focus:outline-none focus:ring-4 focus:ring-orange-400" onclick="redirectToSignup()">Escolher Plano</button>
+                <button
+                    class="w-full py-3 text-lg font-bold text-white bg-orange-600 rounded-full hover:bg-orange-700 shadow-lg transition-transform duration-300 focus:outline-none focus:ring-4 focus:ring-orange-400"
+                    onclick="redirectToSignup()">Escolher Plano</button>
             </div>
         </div>
     </section>
     <script src="script.js"></script>
 </body>
+
 </html>
