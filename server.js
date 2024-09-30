@@ -1,6 +1,7 @@
 const { Sequelize } = require('sequelize');
 const express = require('express');
 const bcrypt = require('bcrypt');
+const path = require('path');
 const cors = require('cors');
 
 const app = express();
