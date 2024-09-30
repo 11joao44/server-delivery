@@ -1,5 +1,5 @@
 function redirectToSignup() {
-    window.location.href = 'signup.html';
+    window.location.href = 'login.html';
 }
 
 function loadSelectedPlan(plan) {
